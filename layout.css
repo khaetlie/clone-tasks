@@ -1,3 +1,4 @@
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -10,14 +11,14 @@
 html, body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Prevents scrolling */
-    background-color: #4DCCBD;
+    overflow-x: hidden; /* prevents scrolling */
+    background-color: #070410;
 }
 
 header nav {
   display: flex;
-  justify-content: space-between; /* Space out the items */
-  align-items: center; /* Align vertically in the center */
+  justify-content: space-between; 
+  align-items: center; 
   width: 100%;
   background-color:#231651;
   margin-bottom:20px;
@@ -27,19 +28,25 @@ h1 {
   font-size: 100px;
   font-family: "Teko", sans-serif;
   color: white;
-  margin-right: auto; /* Push h1 to the left */
+  margin-right: auto; /* h1 to the left */
+}
+
+.title{
+  font-weight: bold; /*makes the movie title bold */
+  font-size: 2em;
+  font-family: "Teko", sans-serif;
 }
 
 .genre {
   font-family: "Lato", sans-serif;
-  margin: 0 10px; /* Add spacing between the genre links */
+  margin: 0 10px; /* spaces between the genre links */
   color: white;
   text-decoration: none;
 }
 
 .search {
   padding: 8px 16px;
-  font-size: 16px;
+  font-size: 2em;
   cursor: pointer;
   background-color:#eef36a;
   border: 1px solid black;
@@ -52,7 +59,7 @@ h1 {
     color: rgb(0, 0, 0);
     width: 100%;
     padding-top: 0;
-    background-color:#4DCCBD;
+    background-color:#070410;
     max-width: 900px;
 }
 
@@ -70,18 +77,19 @@ p {
 .watch {
     background-color:#eef36a;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 6px;
     font-family: "Teko", sans-serif;
     display: block;
-    margin: 0 auto; /* This will center the button horizontally */
+    margin: 0 auto; /* center the button */
     margin-bottom: 20px;
     font-size: 2em;
+    width: 100%;
 }
 
 .posters {
     width: 100%;
-    height: 100%; /* Ensure full height */
+    height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -134,7 +142,7 @@ p {
   background-color: #231651;
   color: white;
 }
-/* Media Queries */
+/* media query for mobile */
 @media (min-width: 360px) and (max-width: 720px) {
     
     h1 {
@@ -155,47 +163,20 @@ p {
       border-radius: 25px;
     }
 
+    .watch{
+      width: 90%;
+      padding: 30px;
+    }
+
     .posters {
         width: 100%;
         height: 100vh;
         object-fit: cover;
-        margin-top: 0; /* Ensure no gap at the top */
+        margin-top: 0; /* removes the gap at the top */
     }
 
-    .barbie{
-      border: 2px solid black;
-      margin-bottom: 20px;
-    }
-    
-    .hidden_figures{
-      border: 2px solid black;
-      margin-bottom: 20px;
-    }
-    
-    .hook{
-      border: 2px solid black;
-      margin-bottom: 20px;
-    }
-    .lalaland{
-      border: 2px solid black;
-      margin-bottom: 20px;
-    }
-    .palm_springs{
-      border: 2px solid black;
-      margin-bottom: 20px;
-    }
-    .roger_rabbit{
-      border: 2px solid black;
-      margin-bottom: 20px;
-    }
-}
-
-@media (min-width: 360px) and (max-width: 720px) {
-  /* Keep existing styles for small screens */
-  h1 {
-    font-size: 80px;
-    color: white;
-    margin-left: 30px;
+  body{
+    background-color: #4DCCBD;
   }
 
   .genre {
@@ -214,7 +195,7 @@ p {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    margin-top: 0; /* Ensure no gap at the top */
+    margin-top: 0; /* removes the gap at the top */
   }
 
   .barbie,
@@ -233,56 +214,65 @@ p {
 @media (min-width: 720px) and (max-width: 1024px) {
   header nav {
     display: flex;
-    justify-content: center; /* Center the items horizontally */
+    justify-content: center; /* center the items */
     align-items: center;
   }
 
   .genre {
     font-family: "Lato", sans-serif;
-    margin: 0 20px; /* Add spacing between the genre links */
+    margin: 0 10px; /* spaces for the genre links */
     color: white;
     text-decoration: none;
   }
 
   h1 {
-    margin-left: 32px; /* Keep h1 aligned left */
+    margin-left: 32px; /* h1 aligned on the left */
   }
 
   .search {
-    margin-right: 32px; /* Keep search button aligned right */
+    margin-right: 32px; /* button aligned on the right */
     font-size: 2em;
   }
 
-  /* Apply the grid layout for content */
+  /* apply the grid layout for content */
   .content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    grid-template-rows: repeat(2, auto); /* 2 rows, height adjusts based on content */
-    gap: 20px; /* Space between grid items */
+    grid-template-columns: repeat(2, 1fr); /* creates two columns */
+    grid-template-rows: repeat(2, auto); 
+    gap: 20px;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     background-color: #070410;
   }
 
-  /* Each content block (like .barbie, .hidden_figures) will be in the grid */
   .barbie,
   .hidden_figures,
   .hook,
   .lalaland,
   .palm_springs,
   .roger_rabbit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 2px solid black;
     background-color: #231651;
     color: white;
     padding: 10px;
     border-radius: 1px; 
-    box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5); /* Horizontal, Vertical, Blur radius, Color */
+    box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5); /* horizontal, vertical, lur radius, color */
+  }
+
+  .watch{
+    margin-top: auto;
+  }
+  p{
+    margin-bottom: 30px;
   }
   
   }
 
-  /* Ensure posters fit well inside the content grid */
+   
   .posters {
     width: 100%;
     height: auto;
@@ -298,109 +288,148 @@ p {
   }
 
 
-@media (min-width: 1024px) {
+  @media (min-width: 1024px) {
 
-  header nav {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Three columns */
-    align-items: center;
-    padding-right: 32px; /* Add padding to the right side */
-}
-
-h1 {
-    justify-self: start;
-    margin-left: 16px;
-}
-
-.genre-container {
-    display: flex;
-    gap: 48px;
-    justify-content: center;
-}
-
-.search {
-    justify-self: end;
-    margin-right: 16px; /* Increase right margin for additional spacing */
-}
-    /* Define grid layout for the container */
+    /* header adjustments */
+    header nav {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr; /* Three columns */
+      align-items: center;
+      position: relative;
+    }
+    
+    h1 {
+      justify-self: start;
+      margin-left: 16px;
+    }
+    
+    .genre-container {
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      grid-column: 2;
+    }
+    
+    .search {
+      position: absolute;
+      right: 24px;
+      margin-top: -25px;
+    }
+    
+  
+    /* main content grid */
     .content {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* 2 columns */
-        grid-template-rows: auto auto auto; /* 3 rows (or more depending on your layouts) */
-        gap: 20px; /* Space between items */
-        background-color:#070410;
-        grid-template-areas: 
-            "card1 card1"
-            "card2 card3"
-            "card4 card4"
-            "card5 card5"
-            "card6 card6"; /* Adjust grid areas to fit your 5 items */
-        max-width: 1000px; /* Optional: limit the width of the grid */
-        margin: 0 auto; /* Center the content */
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* create two columns */
+      gap: 20px;
+      background-color: #070410;
+      grid-template-areas: 
+          "card1 card1"
+          "card2 card3"
+          "card4 card4"
+          "card5 card5"
+          "card6 card6"; /* creating a grid area to show specific places */
+      max-width: 1000px;
+      margin: 0 auto;
     }
-
-    /* Grid area assignments */
+  
+    /* individual card layout for barbie */
     .barbie {
-        grid-area: card1;
-        background-color: #231651;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5); 
-    }
-    .hidden_figures {
-        grid-area: card2;
-        background-color: #231651;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5); 
-    }
-    .hook {
-        grid-area: card3;
-        background-color: #231651;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5); 
-    }
-    .lalaland {
-        grid-area: card4;
-        background-color: #231651;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5); 
-    }
-
-    .palm_springs {
-      grid-area: card5;
+      grid-area: card1;
+      display: grid;
+      grid-template-rows: auto 1fr auto; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 10px;
       background-color: #231651;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5); 
+      box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5);
     }
-    .roger_rabbit {
-        grid-area: card6;
-        background-color: #231651;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5); 
-      }
-
-    /* Style for images and buttons inside each layout block */
-    .posters {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
-
-    .watch {
-        background-color: #eef36a;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 1.2em;
-        cursor: pointer;
-    }
-}
-
   
-
+    .barbie .posters {
+      grid-column: 1 / -1; /* span both columns */
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
   
+    .barbie p {
+      grid-row: 2;
+      grid-column: 1 / 2; /* the button i s placed at the bottom left */
+      margin-left: 20px;
+      align-self: start;
+    }
+  
+    .barbie .watch {
+      grid-row: 2;
+      grid-column: 2; /* the button will be at the bottom right */
+      justify-self: end;
+      background-color: #eef36a;
+      padding: 10px 24px; /* makes the button longer */
+      margin-top: 20px;
+      border-radius: 5px;
+      width:280px;
+      font-size: 2em;
+      cursor: pointer;
+    }
+  
+    /* styles for hidden_figures and hook */
+    .hidden_figures {
+      grid-area: card2;
+      background-color: #231651;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5);
+    }
+  
+    .hook {
+      grid-area: card3;
+      background-color: #231651;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5);
+    }
+  
+    /* styles for lalaland, palm_springs, and roger_rabbit */
+    .lalaland, .palm_springs, .roger_rabbit {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* two columns for the grid */
+      gap: 10px;
+      background-color: #231651;
+      padding: 20px;
+      box-shadow: 10px 10px 5px rgba(77, 300, 400, 0.5);
+      align-items: start;
+      max-height:500px;
+    }
+  
+    .lalaland .posters, .palm_springs .posters, .roger_rabbit .posters {
+      grid-column: 1; /* place in first column */
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  
+    .lalaland p, .palm_springs p, .roger_rabbit p {
+      grid-column: 2; /* place in second column */
+      margin-top:50px;
+    }
+  
+    .lalaland .watch, .palm_springs .watch, .roger_rabbit .watch {
+      grid-column: 2; /* this places it in the second column*/
+      background-color: #eef36a;
+      padding: 10px 24px;
+      font-size: 2em;
+      cursor: pointer;
+      margin-bottom:90px;
+      align-self: start;
+      width: 280px;
+    }
+  
+    .barbie { grid-area: card1; }
+    .hidden_figures { grid-area: card2; }
+    .hook { grid-area: card3; }
+    .lalaland { grid-area: card4; }
+    .palm_springs { grid-area: card5; }
+    .roger_rabbit { grid-area: card6; }
+  }  
