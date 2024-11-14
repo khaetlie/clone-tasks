@@ -1,0 +1,421 @@
+/*import google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#e9e9e9;
+}
+
+header {
+    background-color: #e9e9e9; 
+    padding: 10px 0; /* adjust padding */
+    text-align: center;
+    width: 100%;
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: auto;
+    padding: 1%;
+}
+
+nav {
+    margin: 0;
+    padding: 1%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.blog, .navigation {
+    text-decoration: none;
+    color: black; /*text color */
+    font-family: "Josefin Sans", sans-serif; /*font family*/
+    padding: 0 10px; /*adjust the padding */
+}
+
+.title {
+    font-size: 2.5rem; 
+    font-family: "Protest Guerrilla", sans-serif;
+    text-align: center; /* center the text */
+}
+
+.subtitle {
+    font-size: 2.5rem; 
+    font-family: "Protest Guerrilla", sans-serif;
+    text-align: center;
+}
+
+h1,h3 {
+    font-family: "Protest Guerrilla", sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+p {
+    font-family: "Josefin Sans", sans-serif;
+    text-align: left; /* align the text to the left */
+}
+
+.content {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    width: 100%;
+    margin: 0;
+    padding: 5%;
+    box-sizing: border-box;
+    padding-top: 10px; /* Ensure there's no overlap with the header */
+    height: auto;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.pictures {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0; /* remove the margins */
+    padding: 0; /* remove the paddings */
+}
+
+.encores, .picture {
+    width: 100%; /* full width of the screen */
+    height: 100vh; /* full height of the screen */
+    object-fit: cover; /*make sure that the image is not cropped */
+}
+  
+
+
+#pfp {
+    width: 80px;
+    height: auto;
+    border-radius: 50%; /*round shaped image */
+    margin: auto;
+    display: block;
+}
+
+.copyright {
+    color: white;
+    text-align: center;
+}
+
+footer {
+    background-color: #14181d;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/*media query for mobile*/
+@media (min-width: 360px) and (max-width: 540px) {
+    .logo {
+        width: 80px;
+        display: block;
+        margin: auto;
+        padding: 1%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    header {
+        background-color: #e9e9e9;
+    }
+    
+    .blog, .navigation {
+        text-decoration: none;
+        color: black; /*text color */
+        font-family: "Josefin Sans", sans-serif; /*font family*/
+        padding: 0 20px; /*adjust the padding */
+    }
+    
+    .title {
+        font-size: 2.5rem; 
+        font-family: "Protest Guerrilla", sans-serif;
+        text-align: center;
+    }
+    
+    .subtitle {
+        font-size: 2.5rem; 
+        font-family: "Protest Guerrilla", sans-serif;
+        text-align: center;
+    }
+
+    
+    p {
+        font-family: "Josefin Sans", sans-serif;
+        text-align: left;
+    }
+    
+    .content {
+        color: rgb(0, 0, 0);
+        border: 2px solid black; 
+        width: 100%;
+        margin: auto;
+        padding: 5%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .encores, .picture {
+        position: relative;
+        lefT: 50%;
+        transform: translateX(-50%);
+        width: 100vw; 
+        height: 100vh; 
+    }
+    #pfp {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: auto;
+        display: block;
+        padding-top:20px;
+    }
+    
+    footer {
+        background-color: #14181d;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+}
+
+/* media query for larger mobile */
+@media (min-width: 540px) and (max-width: 720px) {
+    .logo {
+        width: 80px;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 5px; 
+
+    }
+
+    .subtitle{
+        margin-top: 0; 
+
+    }
+
+    h1,h3 {
+        font-family: "Protest Guerrilla", sans-serif;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    
+    .navigation{
+        padding-left:15%;
+    }
+    .content {
+        color: rgb(0, 0, 0);
+        border: 2px solid black; 
+        width: 100%;
+        margin: auto;
+        padding: 5%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .encores, .picture {
+        position: relative;
+        lefT: 50%;
+        transform: translateX(-50%);
+        width: 100vw; 
+        height: 100vh; 
+    }
+
+    #pfp {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-top:5%;
+        display: block;
+        
+    } 
+}
+/* media query for tablet */
+@media (min-width: 720px) and (max-width: 1024px) {
+    .logo {
+        width: 80px;
+    }
+    
+    .navigation {
+        padding-left: 15%;
+    }
+    
+    .title {
+        font-size: 3rem;
+        text-align: center;
+        padding-left: 20px;
+        margin-bottom: 5px; 
+    }
+    
+    .subtitle {
+        font-size: 3rem; 
+        text-align: center;
+        padding-left: 17px;
+        margin-top: 0; 
+    }
+    
+    .content {
+        width: 80%; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding-left: 30px; /* left padding */
+        padding-right: 30px; /* right padding */
+        padding-top: 10px; /* space between the header and content*/
+        box-sizing: border-box;
+        height: auto;
+        overflow-y: auto; /* vertical scrolling */
+    }
+    
+    .pictures {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* creates two columns */
+        gap: 0; 
+        width: calc(100% + 60px); /* extend the width outside the content */
+        margin-left: -30px; /* adjusting the left margin to fit the content */
+        margin-right: -30px; 
+    }
+    
+    .encores {
+        display: none; /* Hides the image */
+    }
+    
+    .picture {
+        width: 100%; 
+        height: auto;
+    }    
+    
+    .about {
+        display: flex;
+        align-items: center; /* items are aligned in the center */
+        justify-content: center;
+        text-align: left;
+        gap: 20px; 
+        padding-top:30px;
+        padding-right: 20px;
+    }
+    
+    .about div:first-child { /* author's information */
+        order: 1; /* this places the information on the left side */
+        flex: 1; 
+    }
+    
+        #pfp { /* profile picture */
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0; 
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #14181d; 
+            padding: 10px;
+            width: 78%; 
+            max-width: 1200px; /* max-width of .content */
+            margin: 0 auto; /* center the footer */
+            text-align: center;
+            color: white;
+            border: 1px solid black;
+        }
+}
+
+/* media query for desktop*/
+@media (min-width: 1024px) {
+    .logo {
+        width: 200px;
+    }
+    
+
+    .navigation {
+        padding-left: 10%; /*add padding between the texts*/
+    }
+    .title {
+        font-size: 4rem;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 5px; 
+    }
+    
+    .subtitle {
+        font-size: 1.5rem; 
+        text-align: left;
+        padding-left: 17px;
+        margin-top: 0; 
+    }
+
+    h3, .intro-text{
+        font-size: 1.5rem;
+    }
+    p{
+        padding-left: 17px;
+    }
+
+    .content {
+        width: 70%; /* adds space on both sides */
+        max-width: 1200px; /* max-width of .content */
+        margin: 0 auto; /* center the content horizontally */
+        padding-top: 10px; /* padding between the header and content*/
+        overflow-y: auto; /* vertical scrolling */
+    }
+    
+    
+    .pictures {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .encores {
+        max-height: 300px;
+    }
+    
+    .picture {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .about {
+        display: flex;
+        align-items: center; /* Vertically align items */
+        justify-content: center; /* Spread items left and right */
+        text-align: left;
+        gap: 20px; /* Add spacing between the elements */
+        padding-top: 30px;
+        padding-right: 20px;
+    }
+    
+    .about div:first-child { /* Author info */
+        order: 1; /* Place author info on the left */
+        flex: 1; /* Take up remaining space on the left */
+    }
+    
+        #pfp { /* profile picture */
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0; 
+            object-fit: cover;
+        }
+
+    footer {
+        background-color: #14181d;
+        padding: 10px;
+        width: 68%; 
+        max-width: 1200px; /* max-width of .content */
+        margin: 0 auto; /* center the footer */
+        text-align: center; /* center the text */
+        color: white; /* text color */
+        border: 1px solid black;
+    }
+}
