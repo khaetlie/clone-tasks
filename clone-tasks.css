@@ -8,6 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1em;
     background-color:#e9e9e9;
 }
 
@@ -31,6 +32,10 @@ nav {
     text-align: center;
     margin-top: 1%;
     margin-bottom: 2%;
+}
+
+nav a:hover{
+    color: rgb(142, 133, 133);
 }
 
 .blog, .navigation {
@@ -362,42 +367,100 @@ footer {
         padding-left: 17px;
     }
 
+    .main-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+        gap: 20px; /* Spacing between columns */
+    }
+    
+    /* Ensure sections have consistent spacing */
+    .section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Spacing between heading and paragraphs */
+    }
+    
+    /* Adjust the heading and paragraph spacing to match the layout */
+    .section h1 {
+        margin-bottom: 10px; /* Space below heading */
+        font-size: 18px;
+    }
+    
+    .section p {
+        margin: 5px 0; /* Space between paragraphs */
+    }
+    /* Body styling to create padding and gap around content */
+
+
     .content {
-        width: 70%; /* adds space on both sides */
-        max-width: 1200px; /* max-width of .content */
-        margin: 0 auto; /* center the content horizontally */
-        padding-top: 10px; /* padding between the header and content*/
-        overflow-y: auto; /* vertical scrolling */
+        width: 80%; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding-left: 30px; /* left padding */
+        padding-right: 30px; /* right padding */
+        padding-top: 10px; /* space between the header and content*/
+        box-sizing: border-box;
+        height: auto;
+        overflow-x:hidden; /* removes horizontal scrolling */
     }
-    
-    
     .pictures {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* four columns */
+        grid-template-rows: repeat(2, 1fr);    /* two rows */
+        width: 100%; 
+        max-width: 1200px; /* the maximum width of the container */
+        margin: 0 auto; /* center the container */
+        grid-template-areas: 
+            "encores encores picture1 picture2"
+            "encores encores picture3 picture4";
+        padding: 0; /* no padding inside the container */
+        background-color: white;
+        gap: 0; 
     }
     
+    /* defining grid areas */
     .encores {
-        max-height: 300px;
+        grid-area: encores;
     }
     
-    .picture {
-        max-width: 200px;
-        max-height: 200px;
+    .pictures img:nth-child(2) {
+        grid-area: picture1;
     }
+    
+    .pictures img:nth-child(3) {
+        grid-area: picture2;
+    }
+    
+    .pictures img:nth-child(4) {
+        grid-area: picture3;
+    }
+    
+    .pictures img:nth-child(5) {
+        grid-area: picture4;
+    }
+    
+    .pictures img {
+        width: 100%; /* make images fill the grid cells */
+        height: 100%; 
+        object-fit: cover; 
+        margin: 0; /* remove any margin */
+    }
+    
+
 
     .about {
         display: flex;
-        align-items: center; /* Vertically align items */
-        justify-content: center; /* Spread items left and right */
+        align-items: center; /* align items to the center */
+        justify-content: center; /* spread items left and right */
         text-align: left;
-        gap: 20px; /* Add spacing between the elements */
+        gap: 20px; 
         padding-top: 30px;
         padding-right: 20px;
     }
     
-    .about div:first-child { /* Author info */
-        order: 1; /* Place author info on the left */
-        flex: 1; /* Take up remaining space on the left */
+    .about div:first-child { /* author info */
+        order: 1; /* place author info on the left */
+        flex: 1; 
     }
     
         #pfp { /* profile picture */
@@ -411,11 +474,29 @@ footer {
     footer {
         background-color: #14181d;
         padding: 10px;
-        width: 68%; 
+        width: 78%; 
         max-width: 1200px; /* max-width of .content */
         margin: 0 auto; /* center the footer */
         text-align: center; /* center the text */
         color: white; /* text color */
         border: 1px solid black;
     }
+
+    article {
+        margin: 50px;
+        column-count: 3; /* create three columns */
+        column-gap: 50px; /* space between columns */
+        h1 {
+            margin: 0;
+        }
+
+        p {
+
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+
 }
+
